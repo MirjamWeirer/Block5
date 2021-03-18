@@ -28,4 +28,35 @@ public class LinkedList {
             current = current.next;
         }
     }
+
+    // suche => returns Index if value is on the train, return -1 if value is not on the train
+    public int containsValue(int value){
+        Node current = first;
+        int index = 1;
+        while (current != null){
+            if (current.value == value){
+                return index;
+            }
+            current = current.next;
+            index++;
+        }
+        return -1;
+    }
+
+    public Node getAt(int position){
+        Node current = first;
+        int index = 1;
+        while (current != null){
+            if (position == index){
+                return current;
+            }
+            current = current.next;
+            index++;
+        }
+        return null;
+    }
+
+    // delete
+    // einfügen an bestimmter stelle
+    // changeValue
 }
