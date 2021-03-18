@@ -82,7 +82,49 @@ public class LinkedList {
         }
     }
 
-
     // einfügen an bestimmter stelle
+    public void addElement(int position, int value){
+        Node newWagon = new Node();
+        newWagon.value = value;
+        Node current = first;
+        int index = 1;
+        position = position -1;
+        if (first == null) {
+            // we have an empty train
+            first = newWagon;
+            last = newWagon;
+            return;
+        }
+        if (position == 0){
+            first = newWagon;
+            newWagon.next = current;
+        }else {
+            while (current != null){
+                if (position == index){
+                    Node next = current.next;
+                    current.next = newWagon;
+                    newWagon.next = next;
+                    if (last == current){
+                        last = newWagon;
+                    }
+                }
+
+                current = current.next;
+                index++;
+            }
+        }
+    }
     // changeValue
+    public void changeValue(int positon, int newValue){
+        Node current = first;
+        int index = 1;
+        while (current != null){
+            if (positon == index){
+                current.value = newValue;
+                break;
+            }
+            current = current.next;
+            index++;
+        }
+    }
 }
