@@ -30,8 +30,8 @@ public class DemoRekursionApp {
         char firstCharacter = text.charAt(0);
         char lastCharacter = text.charAt(text.length() - 1);
 
-        System.out.println("firstCharacter = " + firstCharacter);
-        System.out.println("lastCharacter = " + lastCharacter);
+        //System.out.println("firstCharacter = " + firstCharacter);
+        //System.out.println("lastCharacter = " + lastCharacter);
 
         if (firstCharacter == lastCharacter){
             text = text.substring(1, text.length() -1); // erstes und letztes Zeichnen weggeschnitten
@@ -43,4 +43,6 @@ public class DemoRekursionApp {
         }
         return false;
     }
+
+
 }
