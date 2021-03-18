@@ -1,0 +1,12 @@
+package linkedlist;
+
+//Wagon
+public class Node {
+    //Er kann eine Ware aufnehmen (Cargo, Personen, Kohle, Erdöl, ...)
+
+    // Ware, Zahlen 1...
+    int value;
+
+    // Wir kennen unsere Nachfolger, ist wieder ein Node / Wagon
+    Node next; //Verknüpfungspunkt
+}
