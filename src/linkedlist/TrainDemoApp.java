@@ -12,6 +12,7 @@ public class TrainDemoApp {
 
         //etwas später
         linkedList.add(19);
+        linkedList.add(58);
         linkedList.add(22);
         linkedList.add(35);
         linkedList.add(66);
@@ -27,7 +28,21 @@ public class TrainDemoApp {
 
         System.out.println("linkedList.getAt(3) = " + linkedList.getAt(3).value);
         System.out.println("linkedList.getAt(5) = " + linkedList.getAt(5).value);
-        System.out.println("linkedList.getAt(8) = " + linkedList.getAt(8));
+        System.out.println("linkedList.getAt(8) = " + linkedList.getAt(8).value);
         System.out.println("linkedList.getAt(10) = " + linkedList.getAt(10));
+
+        linkedList.printAllNodes();
+        System.out.println();
+        linkedList.delteAt(3);
+        linkedList.printAllNodes();
+        System.out.println();
+        linkedList.delteAt(1);
+        linkedList.printAllNodes();
+        System.out.println();
+        linkedList.delteAt(6);
+        linkedList.printAllNodes();
+        System.out.println();
+        linkedList.add(99);
+        linkedList.printAllNodes();
     }
 }
